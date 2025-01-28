@@ -7,23 +7,23 @@ import ThemeContext from '../contexts/ThemeContext';
 import LocaleContext from '../contexts/LocaleContext';
 
 function Navigation({ user, logout }) {
-  const {theme, toggleTheme} = React.useContext(ThemeContext);
-  const {locale, toggleLocale} = React.useContext(LocaleContext)
+  const { theme, toggleTheme } = React.useContext(ThemeContext);
+  const { locale, toggleLocale } = React.useContext(LocaleContext)
 
   return (
     <header>
       <h1>
-        <Link to={'/'}>{locale === 'id'?'Aplikasi Catatan':'Notes App'}</Link>
+        <Link to={'/'}>{locale === 'id' ? 'Aplikasi Catatan' : 'Notes App'}</Link>
       </h1>
       {user && (<nav className='navigation'>
         <ul>
           <li>
-            <Link to={'/archives'}>{locale === 'id'?'Arsip':'Archived'}</Link>
+            <Link to={'/archives'}>{locale === 'id' ? 'Arsip' : 'Archived'}</Link>
           </li>
         </ul>
       </nav>)}
       <button className='toggle-locale' onClick={toggleLocale}><MdGTranslate /></button>
-      <button className='toggle-theme' onClick={toggleTheme}>{theme === 'light'? <MdOutlineDarkMode />: <MdOutlineLightMode /> }</button>
+      <button className='toggle-theme' onClick={toggleTheme}>{theme === 'light' ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}</button>
       {user && (<button className='button-logout' onClick={logout}><FiLogOut />{user.name}</button>)}
     </header>
   )

@@ -10,7 +10,7 @@ import LoadingIndicator from "../components/LoadingIndicator";
 
 function ArchivePageWrapper() {
     const [searchParams, setSearchParams] = useSearchParams();
-    const {locale} = React.useContext(LocaleContext);
+    const { locale } = React.useContext(LocaleContext);
     const keyword = searchParams.get("keyword");
 
     function changeSearchParams(keyword) {
@@ -60,7 +60,7 @@ class ArchivePage extends React.Component {
 
         return (
             <>
-                <h2>{this.props.locale === 'id'? 'Catatan Arsip': 'Archived Note'}</h2>
+                <h2>{this.props.locale === 'id' ? 'Catatan Arsip' : 'Archived Note'}</h2>
                 <SearchBar keyword={this.state.keyword} keywordChange={this.onKeywordChangeHandler} />
                 {notes.length ? <NotesList notes={notes} /> : <NoteListEmpty />}
             </>
@@ -71,6 +71,7 @@ class ArchivePage extends React.Component {
 ArchivePage.propTypes = {
     defaultKeyword: PropTypes.string,
     keywordChange: PropTypes.func.isRequired,
+    locale: PropTypes.string.isRequired,
 };
 
 export default ArchivePageWrapper;

@@ -18,9 +18,9 @@ function LoginPage({ loginSuccess }) {
 
     return (
         <section className='login-page'>
-            <h2>{locale === 'id'?'Yuk, login untuk menggunakan aplikasi.':'Login to use the app, please.'}</h2>
+            <h2>{locale === 'id' ? 'Yuk, login untuk menggunakan aplikasi.' : 'Login to use the app, please.'}</h2>
             <InputLogin login={onLogin} />
-            <p>{locale === 'id'?'Belum punya akun?': "Don't have an account?"} <Link to={'/register'} >{locale === 'id'?'Daftar Disini.': 'Register here.'}</Link></p>
+            <p>{locale === 'id' ? 'Belum punya akun?' : "Don't have an account?"} <Link to={'/register'} >{locale === 'id' ? 'Daftar Disini.' : 'Register here.'}</Link></p>
         </section>
     )
 }

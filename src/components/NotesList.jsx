@@ -13,7 +13,14 @@ function NotesList({ notes }) {
 }
 
 NotesList.propTypes = {
-    notes: PropTypes.arrayOf(PropTypes.object).isRequired,
+    notes: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+            body: PropTypes.string.isRequired,
+            createdAt: PropTypes.string.isRequired,
+        })
+    ).isRequired,
 }
 
 export default NotesList

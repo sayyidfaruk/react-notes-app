@@ -6,7 +6,7 @@ function DetailPageAction({ isArchive, onArchive, onDelete }) {
     return (
         <div className='detail-page__action'>
             <button className='action' title='Archive' onClick={onArchive}>
-                {isArchive? <BiArchiveOut /> : <BiArchiveIn />}
+                {isArchive ? <BiArchiveOut /> : <BiArchiveIn />}
             </button>
             <button className='action' title='Delete' onClick={onDelete}>
                 <BiTrash />

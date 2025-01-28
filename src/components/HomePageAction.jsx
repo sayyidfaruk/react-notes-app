@@ -7,7 +7,7 @@ function HomePageAction() {
     <div className='homepage__action'>
       <Link to='/notes/new'>
         <button className='action' type='button' title='Tambah'>
-            <FiPlus />
+          <FiPlus />
         </button>
       </Link>
     </div>

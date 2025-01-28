@@ -40,7 +40,7 @@ function NotesApp() {
 
   return (
     <>
-      <Navigation user={authUser} logout={onLogout}/>
+      <Navigation user={authUser} logout={onLogout} />
       <main>
         {authUser === null ? (
           <Routes>

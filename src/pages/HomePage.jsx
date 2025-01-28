@@ -74,6 +74,7 @@ class HomePage extends React.Component {
 HomePage.propTypes = {
     defaultKeyword: PropTypes.string,
     keywordChange: PropTypes.func.isRequired,
+    locale: PropTypes.string.isRequired,
 };
 
 export default HomePageWrapper;

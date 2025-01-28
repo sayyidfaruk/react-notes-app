@@ -6,10 +6,10 @@ import LocaleContext from '../contexts/LocaleContext';
 
 function RegisterPage() {
     const navigate = useNavigate();
-    const {locale} = React.useContext(LocaleContext);
-    
-    async function onRegisterHandler (user) {
-        const {error} = await register(user);
+    const { locale } = React.useContext(LocaleContext);
+
+    async function onRegisterHandler(user) {
+        const { error } = await register(user);
         if (!error) {
             navigate('/');
         }
@@ -17,9 +17,9 @@ function RegisterPage() {
 
     return (
         <section className='register-page'>
-            <h2>{locale === 'id'?'Isi form untuk mendaftar akun.': 'Fill the form to register account.'}</h2>
+            <h2>{locale === 'id' ? 'Isi form untuk mendaftar akun.' : 'Fill the form to register account.'}</h2>
             <InputRegister register={onRegisterHandler} />
-            <p>{locale === 'id' ? 'Sudah punya akun?': 'Already have an account?'} <Link to={'/'} >{locale === 'id' ? 'Login Disini.': 'Login here.'}</Link></p>
+            <p>{locale === 'id' ? 'Sudah punya akun?' : 'Already have an account?'} <Link to={'/'} >{locale === 'id' ? 'Login Disini.' : 'Login here.'}</Link></p>
         </section>
     )
 }
